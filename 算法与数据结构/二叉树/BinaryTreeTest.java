@@ -1,8 +1,8 @@
 package 二叉树;
 
 import java.util.Queue;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+// import java.io.BufferedReader;
+// import java.io.InputStreamReader;
 public class BinaryTreeTest {
     public static void main(String args[]) {
         BinaryTree<Integer,String> MyTree = new BinaryTree<Integer,String>();
@@ -32,7 +32,12 @@ public class BinaryTreeTest {
 
         MyTree.preErgodic()
                 .forEach(System.out::println);
+                
+        MyTree.layerErgodic()
+                .forEach(System.out::println);
 
+        int depth = MyTree.maxDepth();
+        System.out.println("max depth is " + depth);
                 
 
     }

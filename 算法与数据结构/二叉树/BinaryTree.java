@@ -211,4 +211,50 @@ public class BinaryTree<K extends Comparable<K>, V> {
         }
         keys.add(x.key);
     }
+
+    //层序遍历
+    public Queue<K> layerErgodic(){
+        Queue<K> keys = new LinkedList<K>();
+        Queue<Node<K,V>> nodes = new LinkedList<Node<K,V>>();
+
+        //默认放入根节点
+        nodes.add(root);
+        while(!nodes.isEmpty()){
+            Node<K,V> n = nodes.remove();
+            keys.add(n.key);
+            if(n.left != null){
+                nodes.add(n.left);
+            }
+            if(n.right != null){
+                nodes.add(n.right);
+            }
+        }
+        return keys;
+    }
+
+    public int maxDepth(){
+
+        return maxDepth(root);
+    }
+
+    private int maxDepth(Node<K,V> x){
+        if(x == null){
+            return 0;
+        }
+        int MAX = 0;
+        int leftMAX = 0;
+        int rightMAX = 0;
+        //计算x节点左子树最大深度
+        if(x.left != null){
+            leftMAX = maxDepth(x.left);
+        }
+        //计算x节点右子树
+        if(x.right != null){
+            rightMAX = maxDepth(x.right);
+        }
+        //比较最大，加一
+        MAX = leftMAX > rightMAX? leftMAX + 1:rightMAX+1;
+        
+        return MAX;
+    }
 }
