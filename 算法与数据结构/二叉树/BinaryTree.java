@@ -1,4 +1,4 @@
-package 二叉树;
+package 算法与数据结构.二叉树;
 
 import java.util.LinkedList;
 import java.util.Queue;

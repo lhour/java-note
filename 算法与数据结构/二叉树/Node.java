@@ -7,7 +7,7 @@
  * @FilePath: \算法与数据结构\二叉树\Node.java
  * 
  */
-package 二叉树;
+package 算法与数据结构.二叉树;
 
 public class Node<K extends Comparable<K>,V>{
     public K key;
