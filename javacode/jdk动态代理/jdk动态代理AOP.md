@@ -32,14 +32,35 @@
   * 动态代理的实现方法通常有两种,jdk动态代理,cglib动态代理
 * JDK动态代理
   * java.lang.reflect,里面有三个类
-    * InvocationHandler
+    * InvocationHandler,接口，调用处理器，表示你的代理类要做什么
       * 就一个方法invoke()
       * 你的代理类要完成的功能就写在invoke中，就可以实现代理。
       * 代理类完成的任务
-        * 
+        * 调用目标的方法
+        * 实现功能增强
+      * 如何实现：
+        * 创建类实现InvocationHandler接口
+        * 重写invoke方法，把原来静态代理类中的方法写在这里
+  
     * Method
-      * 
+      * 表示方法，就是接口上的某个方法
+      * 通过method来执行方法，使用method.invoke();
+      * method.invoke(target,参数)
+        * object ret = method.invoke(target,方法里的参数)
+        * 代替实现了，对象.方法(参数)
+        * 优点是，不用具体的代理类
     * Proxy
+      * 核心的对象，创建代理对象，代替new的方法
+      * 方法：静态方法 newProxyInstance()
+      * 创建代理对象，相当于静态中，new Tanbao()
+  * 动态代理实现
+    * 创建接口
+    * 创建目标类实现接口
+    * 创建类实现InvocationHandler接口，重写invoke函数
+      * 需要实现的方法
+      * 功能增强
+    * 使用Proxy创建代理对象，并把返回值转为接口类型
+
 * cglib第三方代理库
   * 原理是继承
   * 通过继承目标类,创建字类,重写父类中的方法,增加功能

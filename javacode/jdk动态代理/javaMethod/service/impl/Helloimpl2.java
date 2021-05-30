@@ -1,6 +1,6 @@
-package javacode.jdk动态代理.动态代理code.service.impl;
+package javacode.jdk动态代理.javaMethod.service.impl;
 
-import javacode.jdk动态代理.动态代理code.service.Helloservice;
+import javacode.jdk动态代理.javaMethod.service.Helloservice;
 
 public class Helloimpl2 implements Helloservice{
 
