@@ -11,6 +11,7 @@ public class Test1{
         //创建基础的对象
         Booksell factory = new BookFactory();
         
+        //如果要改变增强方法，就要改变这个类
         BookProvider pvd = new BookProvider(factory);
 
         //创建代理对象
@@ -18,6 +19,8 @@ public class Test1{
                         factory.getClass().getInterfaces(),
                         pvd);
 
+        //代理执行，既完成任务，比如输出日志，完成程序之类
+        //又完成了增强，比如计算时间，开始和结束时抛出日志
         float price = proxy.sell(1);
         System.out.println(price);
     }
