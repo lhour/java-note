@@ -1,6 +1,6 @@
-package javacode.jdk动态代理.静态代理代码.factory;
+package jdk动态代理.静态代理代码.factory;
 
-import javacode.jdk动态代理.静态代理代码.service.*;
+import jdk动态代理.静态代理代码.service.*;
 
 public class BookFactory implements BookSell{
 

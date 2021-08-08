@@ -1,10 +1,10 @@
-package javacode.jdk动态代理.javaMethod;
+package jdk动态代理.javaMethod;
 
 import java.lang.reflect.*;
 
-import javacode.jdk动态代理.javaMethod.service.Helloservice;
-import javacode.jdk动态代理.javaMethod.service.impl.Helloimpl;
-import javacode.jdk动态代理.javaMethod.service.impl.Helloimpl2;
+import jdk动态代理.javaMethod.service.Helloservice;
+import jdk动态代理.javaMethod.service.impl.Helloimpl;
+import jdk动态代理.javaMethod.service.impl.Helloimpl2;
 
 public class Test1 {
     

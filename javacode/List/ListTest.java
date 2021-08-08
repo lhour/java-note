@@ -1,7 +1,9 @@
-package javacode.List;
+package List;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -84,5 +86,7 @@ public class ListTest {
     
 
     }
+
+    
     
 }

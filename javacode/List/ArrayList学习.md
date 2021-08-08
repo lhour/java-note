@@ -90,7 +90,7 @@
    2. 等于0则返回已经设好的 EMPTY_ELEMENTDATA
    3. 小于0会返回异常
 3. 第三种是将一个实现collection类的对象转变为数组形式
-   1. 同时做了一个判断，如果传进来的类型就是ArrayList，那就直接化等号
+   1. 同时做了一个判断，如果传进来的类型就是ArrayList，那就直接画等号
    2. 否则还要进行一次浅拷贝
    
 ##### toArray
@@ -145,7 +145,6 @@ arraycopy是一个System类的一个方法
 #### get方法
 
 ```java
-
     public E get(int index) {
         Objects.checkIndex(index, size);
         return elementData(index);
@@ -166,6 +165,7 @@ throw outOfBoundsCheckIndex(oobef, index, length);
 ```
 
 #### set方法
+
 ```java
     public E set(int index, E element) {
         Objects.checkIndex(index, size);
@@ -240,4 +240,4 @@ throw outOfBoundsCheckIndex(oobef, index, length);
         return hugeLength(oldLength, minGrowth);
     }
 ```
-这个地方会有两种方式，一种是增加到最小，一种是进行一次位运算
+这个地方会有两种方式，一种是增加到最小，一种是进行一次位运算。一半，向下取整。

@@ -1,10 +1,10 @@
-package javacode.jdk动态代理.动态代理实现;
+package jdk动态代理.动态代理实现;
 
 import java.lang.reflect.Proxy;
 
-import javacode.jdk动态代理.动态代理实现.factory.BookFactory;
-import javacode.jdk动态代理.动态代理实现.provide.BookProvider;
-import javacode.jdk动态代理.动态代理实现.service.Booksell;
+import jdk动态代理.动态代理实现.factory.BookFactory;
+import jdk动态代理.动态代理实现.provide.BookProvider;
+import jdk动态代理.动态代理实现.service.Booksell;
 
 public class Test1{
     public static void main(String[] args) {

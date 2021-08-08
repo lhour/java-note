@@ -1,7 +1,7 @@
-package javacode.jdk动态代理.静态代理代码.test;
+package jdk动态代理.静态代理代码.test;
 
-import javacode.jdk动态代理.静态代理代码.provide.Jingdong;
-import javacode.jdk动态代理.静态代理代码.provide.Taobao;
+import jdk动态代理.静态代理代码.provide.Jingdong;
+import jdk动态代理.静态代理代码.provide.Taobao;
 
 public class Shop1 {
 

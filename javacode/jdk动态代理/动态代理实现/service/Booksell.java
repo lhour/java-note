@@ -1,4 +1,4 @@
-package javacode.jdk动态代理.动态代理实现.service;
+package jdk动态代理.动态代理实现.service;
 
 //功能接口
 public interface Booksell {

@@ -1,7 +1,7 @@
-package javacode.jdk动态代理.静态代理代码.provide;
+package jdk动态代理.静态代理代码.provide;
 
-import javacode.jdk动态代理.静态代理代码.factory.BookFactory;
-import javacode.jdk动态代理.静态代理代码.service.BookSell;
+import jdk动态代理.静态代理代码.factory.BookFactory;
+import jdk动态代理.静态代理代码.service.BookSell;
 
 public class Jingdong implements BookSell {
 

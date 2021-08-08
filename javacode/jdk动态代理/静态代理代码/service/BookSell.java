@@ -1,8 +1,8 @@
-package javacode.jdk动态代理.静态代理代码.service;
+package jdk动态代理.静态代理代码.service;
 /*
  * @Author: lhour
  * @Date: 2021-05-28 22:04:16
- * @LastEditTime: 2021-05-28 23:45:57
+ * @LastEditTime: 2021-08-08 20:09:40
  * @LastEditors: lhour
  * @Description: change me
  * @FilePath: \javacode\jdk动态代理\静态代理代码\service\BookSell.java

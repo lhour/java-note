@@ -1,4 +1,4 @@
-package javacode.jdk动态代理.javaMethod.service;
+package jdk动态代理.javaMethod.service;
 
 public interface Helloservice {
     

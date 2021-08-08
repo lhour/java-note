@@ -1,4 +1,4 @@
-package javacode.Socket;
+package Socket;
 
 // 文件名 GreetingClient.java
 

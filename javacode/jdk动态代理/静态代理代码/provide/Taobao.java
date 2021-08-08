@@ -1,6 +1,6 @@
-package javacode.jdk动态代理.静态代理代码.provide;
-import javacode.jdk动态代理.静态代理代码.factory.BookFactory;
-import javacode.jdk动态代理.静态代理代码.service.BookSell;
+package jdk动态代理.静态代理代码.provide;
+import jdk动态代理.静态代理代码.factory.BookFactory;
+import jdk动态代理.静态代理代码.service.BookSell;
 
 public class Taobao implements BookSell{
 

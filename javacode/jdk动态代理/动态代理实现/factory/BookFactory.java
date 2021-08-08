@@ -1,13 +1,13 @@
-package javacode.jdk动态代理.动态代理实现.factory;
+package jdk动态代理.动态代理实现.factory;
 
-import javacode.jdk动态代理.动态代理实现.service.Booksell;
+import jdk动态代理.动态代理实现.service.Booksell;
 
 public class BookFactory implements Booksell{
 
     /**
      * @param {*}单次购买数量
      * @return {price}单价
-     */    
+     */ 
     @Override
     public float sell(int mount) {
 

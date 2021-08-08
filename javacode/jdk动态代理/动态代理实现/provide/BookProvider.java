@@ -1,4 +1,4 @@
-package javacode.jdk动态代理.动态代理实现.provide;
+package jdk动态代理.动态代理实现.provide;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
