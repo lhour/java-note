@@ -1,4 +1,4 @@
-package leetcode刷题;
+package leetcode;
 
 import java.util.Arrays;
 

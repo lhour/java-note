@@ -1,4 +1,4 @@
-package leetcode刷题;
+package leetcode;
 
 public class Fun48 {
     public static void rotate(int[][] matrix) {
