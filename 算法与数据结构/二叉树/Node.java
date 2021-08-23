@@ -1,13 +1,13 @@
 /*
  * @Author: lhour
  * @Date: 2021-05-24 23:10:20
- * @LastEditTime: 2021-05-25 09:57:15
+ * @LastEditTime: 2021-08-10 13:42:37
  * @LastEditors: lhour
  * @Description: change me
  * @FilePath: \算法与数据结构\二叉树\Node.java
  * 
  */
-package 算法与数据结构.二叉树;
+package 二叉树;
 
 public class Node<K extends Comparable<K>,V>{
     public K key;

@@ -1,4 +1,4 @@
-package 算法与数据结构.堆;
+package 堆;
 
 public class Heap<T extends Comparable<T>> {
     

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatis.dao.StudentDao" >
+    <insert id = "insertStudent">
+        insert into 学生信息表 values(#{学号}, #{姓名}, #{性别}, #{出生日期}, #{政治面貌}, #{班级}, #{毕业学校})
+    </insert>
+
+    <select id = "selectStudents" resultType = "com.example.mybatis.domin.Student">
+        select * from 学生信息表 order by 学号
+    </select>
+</mapper>
+<!-- private String 学号;
+    private String 姓名;
+    private String 性别;
+    private String 出生日期;
+    private String 政治面貌;
+    private String 班级;
+    private String 毕业学校; -->

@@ -1,0 +1,4 @@
+Tomcat收到客户端的http请求，会针对每一次请求，分别创建一个代表请求的request对象、和代表响应的response对象
+
+request对象代表http请求，那么我们获取浏览器提交过来的数据，找request对象即可。
+response对象代表http响应，那么我们向浏览器输出数据，找response对象即可。
