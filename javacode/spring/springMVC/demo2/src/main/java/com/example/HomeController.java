@@ -1,5 +1,9 @@
 package com.example;
 
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,4 +25,15 @@ public class HomeController {
         return new ModelAndView("home", "mensaje", "Hola (ed)Mundo!");
     }
 
+    @RequestMapping(path = "/some.do", method = RequestMethod.GET)
+    public ModelAndView dosome(HttpServletRequest httpServletRequest,
+                                HttpServletResponse httpServletResponse,
+                                HttpSession httpSession) {
+        ModelAndView mav = new ModelAndView();
+        // request.setAttribute();
+        mav.addObject("msg", "dosome");
+        // request.getRequestDispath();
+        mav.setViewName("/show");
+        return mav;
+    }
 }

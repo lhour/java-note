@@ -27,6 +27,7 @@
         </init-param>
 
         <!-- Cargar al iniciar la aplicación -->
+        <!--  启动时创建对象的顺序，数值越小，时间越早 -->
         <load-on-startup>1</load-on-startup>
     </servlet>
 
