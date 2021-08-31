@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -21,7 +22,7 @@ public class HomeController {
      * @return un objeto {@link ModelAndView} con la respuesta al cliente
      */
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public ModelAndView mostrarHome() {
+    public ModelAndView mostrarHome(@RequestParam(value = "iname", required = false)String id) {
         return new ModelAndView("home", "mensaje", "Hola (ed)Mundo!");
     }
 
