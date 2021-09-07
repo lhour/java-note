@@ -24,11 +24,8 @@ public class School {
     }
 
     public void setAdd(String add) {
+        System.out.println("=======================================================================");
         this.add = add;
-    }
-
-    public School(){
-
     }
 
     @Override
