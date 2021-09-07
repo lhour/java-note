@@ -5,3 +5,93 @@
 4. 自动化配置
 5. 提供程序健康检查功能
 6. 基本可以不用 xml 文件 
+
+## 配置文件
+
+**application.properties**
+
+```properties
+# 设置 Tomcat 端口号
+server.port=8081
+
+#多环境下的配置文件
+server.servlet.context-path=/dev
+
+# 自定义
+school.name=myschool
+school.add=weihai
+```
+
+多环境配置文件
+
+`开发/测试/准生产/生产`
+
+![image-20210907112520633](spring boot 01 (copy).assets/image-20210907112520633.png)
+
+
+
+### 自定义注入
+
+```java
+	@Value("${school.name}")
+    private String name;
+
+    @RequestMapping(value = "/say")
+    @ResponseBody
+    public String say() {
+        
+        return "hello " + name;
+    }
+```
+
+```java
+@Component
+@ConfigurationProperties(prefix = "school")
+public class School {
+    
+    private String name;
+
+    private String add;
+
+    public String getName() {
+        return name;
+    }
+    ......
+```
+
+
+
+### yml结尾配置文件
+
+```yml
+server:
+ port: 8080
+ server:
+  context: /
+```
+
+
+
+### request
+
+```java
+	@RequestMapping(value = "/say")
+    @ResponseBody
+    public String say() {
+        
+        return "hello " + name;
+    }
+
+    @RequestMapping(value = "/map")
+    @ResponseBody
+    public Map<String, String> map() {
+        Map<String, String> map = new HashMap<>();
+        map.put("name",name);
+        map.put("add",add);
+
+        return map;
+    }
+```
+
+
+
