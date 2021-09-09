@@ -44,7 +44,7 @@ public class myController {
     public ModelAndView myjsp(){
         ModelAndView mv = new ModelAndView();
         mv.addObject("name", school.getName());
-        mv.setViewName("myjsp");
+        mv.setViewName("jsp/conf/myjsp");
         return mv;
     }
 }

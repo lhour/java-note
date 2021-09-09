@@ -1,113 +1,10 @@
-## 整合jsp
-
-1. 添加依赖
-2. pom文件中修改资源文件（使用idea可以点击操作）
-3. 配置文件填写
-4. 注意方法返回时设置name
-
-```xml
-	<!-- 整合JSP -->
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency>
-```
-
-这个资源的添加不一定满足其他情况，后续可能会发生更改
-
-```xml
-	<resources>
-			<resource>
-                <!-- 资源文件 -->
-				<directory>src/main/webapp</directory>
-                <!-- 输出位置 -->
-				<targetPath>META-INF/resources</targetPath>
-                <!-- 编译那些文件 -->
-				<includes>
-					<include>*.*</include>
-				</includes>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-			</resource>
-		</resources>
-```
-
-```properties
-spring.mvc.view.prefix=/
-spring.mvc.view.suffix=.jsp
-```
-
-```java
-	@RequestMapping(value = "/myjsp")
-    public ModelAndView myjsp(){
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("name", school.getName());
-        mv.setViewName("myjsp");
-        return mv;
-    }
-```
-
-viewName和文件路径一致即可
-
-```jsp
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        <h1>${name}</h1>
-    </body>
-</html>
-```
-
-## 整合mybatis
-
-依赖
-
-```xml
-	<!-- 整合mybatis -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.2.0</version>
-		</dependency>
-```
-
-自动生成的插件
-
-```xml
-			<plugin>
-				<groupId>org.mybatis.generator</groupId>
-				<artifactId>mybatis-generator-maven-plugin</artifactId>
-				<version>1.4.0</version>
-				<configuration>
-					<!-- 配置文件地址 -->
-					<configurationFile>generatorConfig.xml</configurationFile>
-					<verbose>true</verbose>
-					<overwrite>true</overwrite>
-				</configuration>
-			</plugin>
-```
-
-配置文件
-
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<!-- 驱动路径 -->
+
     <classPathEntry location="C:\Users\86178\.m2\repository\mysql\mysql-connector-java\8.0.26\mysql-connector-java-8.0.26.jar"/>
     <!-- context 是逆向工程的主要配置信息 -->
     <!-- id：起个名字 -->
@@ -189,5 +86,3 @@ pageEncoding="UTF-8"%>
                 selectByExampleQueryId="false"></table>
     </context>
 </generatorConfiguration>
-```
-
