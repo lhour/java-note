@@ -1,3 +1,5 @@
+package _2190300408hw2;
+
 import java.util.Scanner;
 import java.lang.Math;
 

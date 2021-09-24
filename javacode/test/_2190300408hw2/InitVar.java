@@ -1,3 +1,5 @@
+package _2190300408hw2;
+
 public class InitVar {
 
     public static void main(String[] args) {

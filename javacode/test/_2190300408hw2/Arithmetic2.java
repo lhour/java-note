@@ -1,3 +1,5 @@
+package _2190300408hw2;
+
 public class Arithmetic2 {
 
     public static void main(String[] args) {
