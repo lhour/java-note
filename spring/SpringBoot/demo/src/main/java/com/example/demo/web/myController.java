@@ -16,7 +16,6 @@ public class myController {
     
     // @Value("${school.name}")
     // private String name;
-
     // @Value("${school.add}")
     // private String add;
 
@@ -26,17 +25,16 @@ public class myController {
     @RequestMapping(value = "/say")
     @ResponseBody
     public String say() {
-        
         return "hello " + school.getName();
     }
 
+    
     @RequestMapping(value = "/map")
     @ResponseBody
     public Map<String, String> map() {
         Map<String, String> map = new HashMap<>();
         map.put("name",school.getName());
         map.put("add",school.getAdd());
-
         return map;
     }
 

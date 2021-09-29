@@ -1,0 +1,9 @@
+// {type:class}
+// {direction:topDown}
+[note: ReentrantLock相关 {bg:cornsilk}]
+[AbstractOwnableSynchronizer]<-[AbstractQueueSynchronizer]
+[AbstractQueueSynchronizer]<-[$.Sync]
+[Lock]<-[ReentrantLock]
+[$.Sync]<-[ReentrantLock]
+[$.Sync]<-[$.NonfairSync]
+[$.Sync]<-[$.FairSync]
