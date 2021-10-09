@@ -1,11 +1,10 @@
-package test;
+package etds;
 
 public class Test2 {
     public static void main(String[] args) {
 		
 	}
 }
-
 
 class FatherClass2 {
 	int n;

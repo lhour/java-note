@@ -10,9 +10,6 @@ public class BankAccount {
 
     private double balance;
 
-    /**
-     * 
-     */
     public BankAccount() {
         this("", 0, 0);
     }
@@ -36,8 +33,7 @@ public class BankAccount {
      */  
     public double deposit(double anAmount) {
         balance += anAmount; 
-        Logger.write("#" + accountNumber + " 存入：$" + new DecimalFormat("#.####").format(anAmount));
-        Logger.write(toString());
+        Logger.info("#" + accountNumber + " 存入：$" + new DecimalFormat("#.####").format(anAmount));
         return balance; 
     } 
     /**
@@ -48,14 +44,36 @@ public class BankAccount {
      */ 
     public double withdraw(double anAmount) {
         if(balance - anAmount < 0){
-            Logger.write("#" + accountNumber + " 取出：$0 [取款失败，余额不足]");
-            Logger.write(toString());
+            Logger.warn("#" + accountNumber + " 取出：$0 [取款失败，余额不足]");
             return anAmount;
         }
         balance -= anAmount; 
-        Logger.write("#" + accountNumber + " 取出：$" + new DecimalFormat("#.####").format(anAmount));
-        Logger.write(toString());
+        Logger.info("#" + accountNumber + " 取出：$" + new DecimalFormat("#.####").format(anAmount));
         return anAmount;
+    }
+
+    public static BankAccount example1() { 
+        BankAccount ba = new BankAccount(); 
+        ba.setOwnerName("LiHong"); 
+        ba.setAccountNumber(554000); 
+        ba.deposit(1000); 
+        return ba; 
+    }    
+
+    public static BankAccount example2(){ 
+        BankAccount ba = new BankAccount(); 
+        ba.setOwnerName("ZhaoWei"); 
+        ba.setAccountNumber(554001); 
+        ba.deposit(1000); 
+        ba.deposit(2000); 
+        return ba; 
+    }
+    
+    public static BankAccount emptyAccountExample(){ 
+        BankAccount ba = new BankAccount(); 
+        ba.setOwnerName("HeLi"); 
+        ba.setAccountNumber(554002); 
+        return ba; 
     }
 
     /**
@@ -106,6 +124,18 @@ public class BankAccount {
                     " with balance $" + 
                     new DecimalFormat("####.####").format(balance) + 
                     " ]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj.getClass() != this.getClass()){
+            return false;
+        }
+        BankAccount ba = (BankAccount)obj;
+        if(ba.getAccountNumber() != this.getAccountNumber()){
+            return false;
+        }
+        return true;
     }
     
 }

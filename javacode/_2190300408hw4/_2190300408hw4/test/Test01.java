@@ -31,8 +31,10 @@ public class Test01 {
 
             if(choose % 2 == 0){                
                 acc1.deposit(money);
+                Logger.write(acc1);
             }else{
                 acc1.withdraw(money);
+                Logger.write(acc1);
             }
         }
 

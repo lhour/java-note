@@ -20,6 +20,7 @@ public class Test02 {
                     Double money = r.nextDouble() * 200;
                     synchronized(ac1){
                         ac1.deposit(money);
+                        Logger.write(ac1);
                     }
                 }
         },"小明").start();
@@ -30,6 +31,7 @@ public class Test02 {
                     Double money = r.nextDouble() * 200;
                     synchronized(ac1){
                         ac1.withdraw(money);
+                        Logger.write(ac1);
                     }
                 }
         },"大伟").start();
