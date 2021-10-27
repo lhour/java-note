@@ -1,7 +1,7 @@
 docker安装tomcat后发现无法访问页面资源
 
 ```
-docker run --name tomcat -p 8080:8080 -v $PWD/test:/usr/local/tomcat/webapps/test -d tomcat
+docker run --name tomcat -p 8080:8080 -v /root/tomcat/main:/usr/local/tomcat/webapps -d tomcat
 ```
 
 首先可以检查防火墙问题
