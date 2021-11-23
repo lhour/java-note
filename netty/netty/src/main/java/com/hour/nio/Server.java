@@ -32,7 +32,6 @@ public class Server {
             // log.debug("connecting...");
             SocketChannel sc = ssc.accept();
             
-
             if(sc != null) {
                 log.debug("connecting... {}", sc);
                 sc.configureBlocking(false);

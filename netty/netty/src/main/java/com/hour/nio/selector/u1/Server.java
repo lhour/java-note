@@ -1,4 +1,4 @@
-package com.hour.worker;
+package com.hour.nio.selector.u1;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -12,8 +12,8 @@ import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class Server {
+
     static Logger log = LoggerFactory.getLogger(Server.class);
 
     public static void main(String[] args) throws IOException {
@@ -58,14 +58,17 @@ public class Server {
                             log.debug("{}已断开", channel);
                         } else {
                             bf.flip();
-                            log.debug("{}", bf);
+                            log.debug("{}", new String(bf.array()));
                         }
                     } catch (Exception e) {
                         // TODO: handle exception
                         e.printStackTrace();
+                        log.debug("异常断开");
                         key.cancel();
                     }
+
                 }
+
             }
         }
     }
